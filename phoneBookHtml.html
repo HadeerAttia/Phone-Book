@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Phone Book</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="newcss.css" rel="stylesheet" type="text/css"/>
+        <script src="script.js"></script>
+    </head>
+    <body onload="onPageLoad()">
+        <div id="big">
+            <div id="inputNo" class="box">
+                    <div id="inputBox"></div>
+                    <a class="dailNo" href="#" onclick="pressDigit('7')">7</a>
+                    <a class="dailNo" href="#" onclick="pressDigit('8')" >8</a>
+                    <a class="dailNo" href="#" onclick="pressDigit('9')">9</a>
+                    </br>
+                    <a class="dailNo" href="#" onclick="pressDigit('4')">4</a>
+                    <a class="dailNo" href="#" onclick="pressDigit('5')">5</a>
+                    <a class="dailNo" href="#" onclick="pressDigit('6')">6</a>
+                    </br>
+                    <a class="dailNo" href="#" onclick="pressDigit('1')">1</a>
+                    <a class="dailNo" href="#" onclick="pressDigit('2')">2</a>
+                    <a class="dailNo" href="#" onclick="pressDigit('3')">3</a>
+                    </br>
+                    <a class="dailNo" href="#" onclick="updateFunction()">Æ</a>
+                    <a class="dailNo" href="#" onclick="pressDigit('0')">0</a>
+                    <a class="dailNo" href="#" onclick="addNewContact()">+</a>
+                    </br>
+                    <a class="dailNo" href="#" id="delete1" onclick="deleteOneDigit()">x</a>
+                    <a class="dailNo" href="#" id="delete1" onclick="inputBox.innerHTML='';unhideContacts()"> < </a>           
+            </div>
+        
+            <div id="contact" class="box">
+                <ul id="list1">      </ul>
+            </div>
+            
+            
+            <div id="history" class="box">
+                <a class="clearButton" href="#" id="clear"><img src="Untitled-1.png" alt=""/></a></br>
+                
+                <ul id="historyList"></ul>
+            </div>
+        </div>
+        
+        <div id="PopupAddContact">
+            <h2 align="center"> You Wanna To </h2>
+            <hr>
+            <p align="center" Id="call"></p>
+                <a id="endCall" align="center" href="#" onclick="endCallButton()"><img src="a.png" alt=""/></a>
+                
+        </div>
+        
+        <div id="PopupUpdate">
+            <h2 align="center"> You Wanna To Update</h2>
+            <hr>
+            <p align="center" Id="call2"> </p>
+            <select id="update">
+                
+            </select><br/>
+                <a id="endCall" align="center" href="#" onclick="updateButton()">Update</a>
+                <a id="endCall" align="center" href="#" onclick="updateCancelButton()">Cancel</a>
+        </div>
+         <div id="PopupAdd">
+            <h2 align="center"> You Wanna To Add</h2>
+            <hr>
+            <input type="text" id="Add22"/>
+            <br/>
+                <a id="Add3" align="center" href="#" onclick="AddButton()">Add</a>
+                <a id="Add3" align="center" href="#" onclick="AddCancelButton()">Cancel</a>
+        </div>
+        
+         <div id="PopupAdd2">
+            <h2 align="center"> Plz Enter More Than 6 Digits</h2>
+            <hr>           
+            <br/>
+                <a id="Add3" align="center" href="#" onclick="AddCancelButton2()"><img src="a.png" alt=""/></a>
+        </div>
+  </body>
+</html>
